@@ -1,0 +1,76 @@
+<html>
+
+<head>
+
+
+<style>
+
+fieldset {
+width:250px;
+height:70px;
+background-color:#787d7d;
+border:1px solid #a9dfbf;
+
+}
+
+#out1 {
+
+margin:30px 30px 60px 40px;
+
+}
+
+</style>
+
+</head>
+
+
+<body  bgcolor="#4D5656">
+
+<fieldset>
+<input type="text" id="out1"></p>
+<br>
+<br>
+</fieldset>
+<br>
+<br>
+<fieldset>
+<p id="out2"></p>
+</fieldset>
+<br>
+<br>
+<input type="button"  value="value"  onclick="getValue()">
+
+<script>
+
+
+
+
+
+
+
+function  getValue() { 
+
+
+
+var net =document.getElementById("out1").value;
+
+if((net > 10) && (net < 20))  {
+
+
+document.getElementById("out2").innerHTML="You are _:"+net+"__years old";
+}
+
+else {
+
+document.getElementById("out2").innerHTML="You are _:"+net+"__years old"+"<p>"+"You are out of order";
+}
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
