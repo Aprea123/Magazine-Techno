@@ -1,2 +1,3 @@
 # Magazine-Techno
-Electronic Music Web Developer Code as JavaScript Json Html Css .
+ <p>Web Developer JavaScript Json Html Css</p>
+ <p>Electronic Music</p>
