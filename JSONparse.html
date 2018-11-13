@@ -1,0 +1,87 @@
+<html>
+
+<head>
+
+<style>
+
+#json {
+
+background-color:#D0D3D4;
+border:1px solid #17A589;
+width:120px;
+height:50px;
+}
+
+#json {
+
+background-color:#D0D3D4;
+border:1px solid #17A589;
+width:120px;
+height:50px;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body bgcolor="#424949"  text="white">
+
+<p>----------------------</p>
+<p id="json1"></p>
+<p>----------------------</p>
+<p id="json2"></p>
+<p>----------------------</p>
+<p id="json3"></p>
+<p>----------------------</p>
+<p id="json4"></p>
+<p>----------------------</p>
+
+<script>
+
+
+
+var JSONtext= '{"name":"Ben","age":36,"pets":[{"name":"Waverly","age":3.5},{"name":"Westley","age":4}]}';
+
+
+
+var author = JSON.parse(JSONtext); document.write(typeof author+"<br>");
+
+//object;
+
+
+document.write(author.name+"<br>"); // Ben document.write(author.pets.length+"<br>"); // 2;
+
+
+
+
+document.write(author.pets[0].name+"<br>"); // Waverly;
+document.write("---------------------------------------------------"+"<br>");
+
+var jsonSet='{"net1":"pro_1","net2":"pro_2","net3":[{"pro_net1":"profile_1","pro_net2":"profile_2"},{"pro_net2":"profile_2","pro_net3":"profile_3"}]}';
+
+
+var jsonPar = JSON.parse(jsonSet);
+
+
+
+
+document.getElementById("json1").innerHTML=jsonPar; document.getElementById("json2").innerHTML=jsonPar.net1;
+
+document.getElementById("json3").innerHTML=jsonPar.net3[0].pro_net1; document.getElementById("json4").innerHTML=jsonPar.net3[1].pro_net2;
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+
+</html>
