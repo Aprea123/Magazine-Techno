@@ -1,0 +1,60 @@
+
+
+<body>
+
+<script>
+
+
+var obj=new Object();
+obj.net1="pro_file-1";
+obj.net2="pro_file-2";
+obj.net3="pro_file-3";
+
+var outJson1=JSON.stringify(obj);
+var outJson2=JSON.stringify(obj,["net1","net2"]);
+
+
+document.write(outJson1+"<br>");
+document.write("-----------------------------------------------"+"<br>");
+document.write(outJson2+"<br>");
+
+
+var arrProfiles=new Object();
+
+arrProfiles['1']="Pro_netsh-1";
+arrProfiles['2']="Pro_netsh-2";
+arrProfiles['3']="Pro_netsh-3";
+
+
+
+var arrJson=JSON.stringify(arrProfiles,[1,2]);
+
+
+document.write("-----------------------------------------------"+"<br>");
+document.write(arrJson+"<br>");
+
+
+var objNet=new Object();
+
+objNet.net1="Pro_1";
+objNet.net2="Pro_2";
+objNet.net3=[{pro_1:"netPro_1",pro_2:"netPro_2"},{pro_3:"netPro_3",pro_4:"netPro_4"}];
+
+
+JSON.stringify(objNet,function(k,v){
+
+document.write("-----------------------------------------------"+"<br>");
+document.write(this+"<br>");
+document.write(k+"<br>");
+document.write(v+"<br>");
+document.write("-----------------------------------------------"+"<br>");
+return v;
+
+});
+
+
+</script>
+
+</body>
+
+</html>
