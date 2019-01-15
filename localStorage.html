@@ -1,0 +1,58 @@
+<html>
+
+<body  bgcolor="silver">
+
+
+<fieldset>
+<p id="storage"></p>
+</fieldset>
+
+<fieldset>
+<p id="local"></p>
+</fieldset>
+
+
+<script>
+
+
+localStorage.setItem("netsh","profiles");
+
+
+document.getElementById("storage").innerHTML=localStorage.getItem("netsh");
+
+
+
+if(typeof(Storage)!=="undefined")  {
+
+localStorage.setItem("netsh","wifi");
+
+
+document.getElementById("local").innerHTML=localStorage.getItem("netsh");
+
+
+}
+
+
+else
+
+{
+
+
+document.getElementById("out").innerHTML="Sorry, your browser does not support web storage";
+
+}
+
+
+
+
+	
+
+
+
+</script>
+
+
+</body>
+
+
+</html>

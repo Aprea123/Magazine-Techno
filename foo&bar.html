@@ -1,0 +1,56 @@
+<html>
+
+
+
+<body>
+
+
+
+<script>
+
+
+
+
+//global scope;
+
+var a=4;
+
+
+function foo(x)  {
+
+//local scope;
+
+var b = a * 4;
+
+//nested local function() scope;
+
+function bar(y)  {
+
+var c= y * b;
+
+return c;
+
+	
+		}
+
+return bar(b);
+
+
+
+	}
+
+
+
+
+
+
+document.write(foo(a));
+
+
+</script>
+
+
+</body>
+
+
+</html>

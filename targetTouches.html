@@ -1,0 +1,36 @@
+<html>
+
+<body  ontouchstart="getTagName(event)">
+
+
+
+
+
+<h1>The touchEvent#s targetTouches property</h1>
+
+<p>The touch any element on this page</p>
+<p>The tag name of the current target is:<span id="netsh"></span></p>
+<p><strong>Note:</strong>Touch events works for touch devices only.</p>
+
+
+
+
+<script>
+
+function getTagName(event)  {
+
+var x=event.targetTouches[0].target.tagName;
+
+document.getElementById("netsh").innerHTML=x;
+
+
+}
+
+
+</script>
+
+
+</body>
+
+
+</html>

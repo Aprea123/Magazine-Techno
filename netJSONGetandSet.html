@@ -1,0 +1,69 @@
+<html>
+
+
+<head>
+</head>
+
+
+
+
+<body>
+
+
+<div id="out1">
+<p id="setSto1"></p>
+</div>
+<br>
+<p>--------------------------------------------------</p>
+<br>
+<div id="out1">
+<p id="setSto2"></p>
+</div>
+<br>
+<p>--------------------------------------------------</p>
+<br>
+
+
+<script>
+
+
+
+var myNet={net1:"netWork-LAN",net2:"netWork-Infranet",net3:"network-wifi"};
+
+myJSON=JSON.stringify(myNet);
+
+localStorage.setItem("testJSON",myJSON);
+
+
+//Retrieving data:
+
+text=localStorage.getItem("testJSON");
+
+obj=JSON.parse(text);
+
+document.getElementById("setSto1").innerHTML=obj.net1;
+
+
+
+
+var myLan={lan1:'localAreaNet1',lan2:'localAreaNet2',lan3:'localAreaNet3',lan4:'localArweanet4'};
+
+outData=JSON.stringify(myLan);
+
+localStorage.setItem("testJSON",outData);
+
+string=localStorage.getItem("testJSON");
+
+obj=JSON.parse(string);
+
+document.getElementById("setSto2").innerHTML=obj.lan1;
+
+
+</script>
+
+
+</body>
+
+
+</html>
+

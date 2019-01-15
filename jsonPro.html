@@ -1,0 +1,122 @@
+<html>
+
+
+<body>
+
+<div id="outPro1"></div>
+<br>
+<p>-------------------------------------------------------</p>
+<br>
+<div id="outPro2"></div>
+<br>
+<p>-------------------------------------------------------</p>
+<br>
+<div id="outPro3"></div>
+<br>
+<p>-------------------------------------------------------</p>
+<br>
+<div id="outChannel"></div>
+<br>
+<p>-------------------------------------------------------</p>
+<br>
+
+
+<script>
+
+var outItems={"Name":"cheese","Price":2.50,"Location":"Refrigerated Foods"};
+
+
+var showItems="";
+
+var x;
+
+
+
+
+for(x in outItems)  {
+
+showItems+=x+"-"+outItems[x]+"<br>";
+
+
+document.getElementById("outPro1").innerHTML=showItems;
+
+
+
+
+}
+
+
+
+
+
+
+var outData={"Profiles":[{"net1":"Pro-1","net2":"Pro-2","net3":"Pro-3"}]}
+
+
+
+for(var i=0; i < outData.Profiles.length; i++)  {
+
+
+document.getElementById("outPro2").innerHTML=outData.Profiles[0].net1;
+
+}
+
+
+outNetsh={
+
+net1:"Prof-1",
+net2:"Prof-2",
+net3:"Prof-3",
+
+}
+
+
+
+var outPro="";
+var y;
+
+
+var jsonStr=JSON.stringify(outNetsh);
+var jsonPar=JSON.parse(jsonStr);
+
+for(y in jsonPar) {
+
+outPro+=y+"-"+jsonPar[y]+"<br>";
+
+document.getElementById("outPro3").innerHTML=outPro;
+
+}
+
+
+
+
+var setItems={"Products":[{"channel":"Data-Packet","channel":"Fixe-lines","channel":"UMTS"}]}
+
+var setPho="";
+var z;
+
+
+var jsonStr=JSON.stringify(setItems);
+var jsonPar=JSON.parse(jsonStr);
+
+
+for(z in jsonPar)  {
+
+
+setPho+=z+":"+jsonPar[z];
+
+document.getElementById("outChannel").innerHTML=setPho;
+
+}
+
+
+
+
+
+</script>
+
+
+</body>
+
+
+</html>

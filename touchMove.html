@@ -1,0 +1,143 @@
+<html>
+
+<head>
+
+<style>
+
+
+#right  {
+float:right;
+border:1px solid #82EDAA;
+width:300px;
+height:250px;
+color:"white";
+background-color:silver;
+text-align:justify;
+margin:20px,20px,10px,10px;
+}
+
+
+
+#left  {
+float:left;
+border:1px solid #82EDAA;
+width:300px;
+height:250px;
+color:"white";
+background-color:silver;
+text-align:justify;
+margin:20px,20px,10px,10px;
+}
+
+
+
+#touchMoveL {
+float:left;
+border:1px solid #82EDAA;
+width:200px;
+height:150px;
+color:"white";
+background-color:silver;
+text-align:justify;
+
+}
+
+
+#touchMoveR {
+float:right;
+border:1px solid #82EDAA;
+width:200px;
+height:150px;
+color:"white";
+background-color:silver;
+text-align:justify;
+
+}
+
+
+
+#demo1 {
+float:left;
+border:1px solid red;
+width:300px;
+height:25px;
+text:"white";
+background-color:silver;
+
+}
+
+#demo2 {
+float:right;
+border:1px solid red;
+width:300px;
+height:25px;
+text:"white";
+background-color:silver;
+
+}
+
+
+</style>
+
+
+</head>
+
+<body  text="white"   bgcolor="#626567">
+
+<div id="left">
+<p id="touchMoveL" ontouchmove="myFunctionLeft(event)">
+Touch this paragraph, and move the finger to trigger a function,
+that will display the x and y coordinates of the  touch, according with the document.</p>
+
+<p id="demo1"></p>
+
+</div>
+
+
+<div id="right">
+<p id="touchMoveR" ontouchmove="myFunctionRight(event)">
+Touch this paragraph, and move the finger to trigger a function,
+that will display the x and y coordinates of the  touch, according with the document.</p>
+
+<p id="demo2"></p>
+
+</div>
+
+<script>
+
+
+function myFunctionLeft(event)  {
+
+var x = event.touches[0].clientX;
+var y = event.touches[0].clientY;
+
+
+document.getElementById("demo1").innerHTML=x+"|"+y;
+
+
+}
+
+
+
+function myFunctionRight(event)  {
+
+var x=event.touches[0].clientX;
+var y=event.touches[0].clientY;
+
+
+document.getElementById("demo2").innerHTML=x+"|"+y;
+
+}
+
+
+
+
+</script>
+
+
+</body>
+
+
+
+
+</html>

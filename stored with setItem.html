@@ -1,0 +1,123 @@
+<html>
+
+<body>
+
+
+<p id="outData"></p>
+<hr>
+<p id="outJSON1"></p>
+<hr>
+<p id="outStorage"></p>
+
+<script>
+
+
+function setStorage()  {
+
+//Check browser support
+
+if(typeof(Storage)!=="undefinded")  {
+
+//store
+localStorage.setItem("lastname","Netsh");
+
+//retrieve
+
+document.getElementById("outData").innerHTML=localStorage.getItem("lastname");
+
+
+}
+
+
+}
+
+
+setStorage();
+
+
+
+
+
+
+var netsh={
+
+netsh:"wifi-1",
+profile:"Network uno",
+network:"Telekom net",
+
+}
+
+var count="";
+
+
+
+var json=JSON.stringify("netsh");
+
+var x;
+
+for(x in json)  {
+
+count += json[x]+"";
+
+
+}
+
+document.getElementById("outJSON1").innerHTML=count;
+
+
+
+
+function setItem() {
+
+var jsonLi={
+
+netsh:"Wifi-1",
+profile:"Hide",
+net:"Telekom",
+
+}
+
+var set="";
+
+for(var x in jsonLi)  {
+
+set+=jsonLi[x]+"<br>";
+
+
+}
+
+
+var string=JSON.stringify(set);
+
+
+localStorage.setItem("testJSON",string);
+
+
+var set=localStorage.getItem("testJSON");
+
+var parse=JSON.parse(set);
+
+
+document.getElementById("outStorage").innerHTML=parse;
+
+
+
+
+}
+
+
+setItem();
+
+
+
+
+</script>
+
+
+</body>
+
+
+
+
+
+</html>

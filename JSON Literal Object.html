@@ -1,0 +1,42 @@
+<html>
+
+<body>
+
+<p id="outJSON"></p>
+
+<script>
+
+
+var makeJSON=  {
+
+netsh:"wifi-1",
+profile:"Hide",
+network:"Telekom net",
+
+
+}
+
+var out="";
+
+var x;
+
+for(x in makeJSON)  {
+
+
+out+=makeJSON[x]+"||-"+x+"<br>";
+
+}
+
+
+document.getElementById("outJSON").innerHTML=out;
+
+</script>
+
+
+</body>
+
+
+
+
+
+</html>

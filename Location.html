@@ -1,0 +1,122 @@
+<html>
+<head>
+
+<style>
+
+label {
+
+background-color:#58D68D;
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body bgcolor="#909497">
+<h4><label>From object to JSON</label></h4>
+<p id="profiles"></p>
+<hr>
+<br>
+<h3><label>Location Methods</label></h3>
+<br>
+<input type="button"  value="Location"  onclick="locaTion1()">
+<br>
+<br>
+<br>
+<fieldset>
+<p id="loca1"></p>
+</fieldset>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<input type="button"  value="Location"  onclick="locaTion2()">
+<br>
+<br>
+<br>
+<fieldset>
+<p id="loca2"></p>
+</fieldset>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<input type="button"  value="Location"  onclick="locaTion3()">
+<br>
+<br>
+<br>
+<fieldset>
+<p id="loca3"></p>
+</fieldset>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<input type="button"  value="Location"  onclick="locaTion4()">
+<br>
+<br>
+<br>
+<fieldset>
+<p id="loca4"></p>
+</fieldset>
+
+
+<script>
+
+
+
+
+var obj={
+
+net1:"profile-1",
+net2:"profile-2",
+
+}
+
+
+var out=JSON.stringify(obj);
+
+
+document.getElementById("profiles").innerHTML=out;
+
+function locaTion1() {
+
+document.getElementById("loca1").innerHTML=window.location.pathname;
+
+}
+
+function locaTion2() {
+
+document.getElementById("loca2").innerHTML=window.location.href;
+
+}
+
+
+
+function locaTion3() {
+
+document.getElementById("loca3").innerHTML=window.location.protocol;
+
+}
+
+function locaTion4() {
+
+document.getElementById("loca4").innerHTML=window.location.assign("http://www.yahoo.com");
+
+}
+</script>
+
+
+</body>
+
+
+</html>

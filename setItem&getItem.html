@@ -1,0 +1,65 @@
+<html>
+<body>
+
+<h2>Store and retrieve data from local storage</h2>
+
+
+<p id="out1"></p>
+<hr>
+<p id="out2"></p>
+<hr>
+<p id="out3"></p>
+<hr>
+<script>
+
+
+
+
+var myObj={
+
+serverNetsh1:'Profile-1',
+serverNetsh2:'Profile-2',
+serverNetsh3:'Profile-3',
+
+}
+
+
+
+
+var myJson=JSON.stringify(myObj);
+
+	localStorage.setItem("testJSON",myJson);
+
+var text=localStorage.getItem("testJSON");
+
+
+var obj=JSON.parse(text);
+
+
+document.getElementById("out1").innerHTML=obj.fileserver;
+document.getElementById("out2").innerHTML=myJson;
+
+
+var set="";
+var get;
+
+for(get in obj )  {
+
+
+set+=get+"---"+obj[get]+"<br>";
+
+
+}
+
+document.getElementById("out3").innerHTML=set;
+
+
+
+
+</script>
+
+
+</body>
+
+
+</html>

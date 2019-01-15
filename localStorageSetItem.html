@@ -1,0 +1,95 @@
+<html>
+
+
+<body>
+
+<fieldset>
+<div id="setItem1">
+<input type="button"  value="createItems"  onclick="createItems()">
+</div>
+<p id="outStor"></p>
+</fieldset>
+<br>
+<br>
+<fieldset>
+<div id="setItem2">
+<input type="button"  value="displayItem"  onclick="displayItems()">
+</div>
+<p id="outStor"></p>
+</fieldset>
+<br>
+<br>
+<fieldset>
+<div id="disPlay">
+<input type="button"  value="displayItem"  onclick="myFunction()">
+</div>
+<p id="outTest"></p>
+</fieldset>
+<br>
+<br>
+<fieldset>
+<div id="disPlay">
+<input type="button"  value="displayItem"  onclick="createItems()">
+</div>
+<p id="outTest"></p>
+</fieldset>
+
+
+<script>
+
+function createItems() {
+
+localStorage.setItem("myTime",Date.now());
+localStorage.setItem("myNet","NetWork");
+localStorage.setItem("myIp","90.275.25");
+
+
+
+}
+
+
+function displayItems() {
+
+
+var x,i;
+
+document.getElementById("outStor").innerHTML="";
+
+for(i =0; i < localStorage.length; i++)  {
+
+x=localStorage.key(i);
+
+document.getElementById("outStor").innerHTML+=x+"<br>";
+
+	}
+
+}
+
+
+function createItems()  {
+
+sessionStorage.test1="Net-1";
+sessionStorage.test2="Net-2";
+sessionStorage.test3="Net-3";
+
+	}
+
+
+
+function myFunction() {
+
+var x=sessionStorage.length;
+
+document.getElementById("outTest").innerHTML=x+"<br>";
+
+
+	}
+
+
+
+</script>
+
+
+</body>
+
+</html>

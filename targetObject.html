@@ -1,0 +1,51 @@
+<html>
+
+
+
+<body  ontouchstart="countTouches(event)"  ontouchend="countTouches(event)">
+
+
+
+
+
+
+<fieldset>
+<h4>TargetTouches</h4>
+</fieldset>
+
+
+
+<fieldset>
+<p id="netsh"></p>
+</fieldset>
+
+
+
+<fieldset>
+<p>In this paragraph will be activate the 0 or 1 number for to count a finger when touch the screen<span id="demo">&nbsp&nbsp0</span>.</p>
+</fieldset>
+
+
+
+<script>
+
+
+
+function countTouches(event)  {
+
+
+var x=event.targetTouches.length;
+
+document.getElementById("netsh").innerHTML=x;
+
+
+}
+
+
+</script>
+
+
+</body>
+
+
+</html>

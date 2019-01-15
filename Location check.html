@@ -1,0 +1,117 @@
+<html>
+
+<head>
+
+<style>
+
+#out1  {
+padding:6px;
+width:150px;
+height:40px;
+background-color:#82E0AA;
+}
+
+#out2  {
+padding:10px;
+width:310px;
+height:40px;
+background-color:#82E0AA;
+}
+
+#out3  {
+padding:10px;
+width:310px;
+height:40px;
+background-color:#82E0AA;
+}
+
+
+
+</style>
+
+</head>
+
+
+<body bgcolor="#909497">
+
+<h2>JavaScript</h2>
+
+<h3>The window.location assign</h3>
+<form name="out1"  id="out1">
+<input type="button"  value="Load new Document" onclick="newDoc1()">
+</form>
+
+<br>
+<br>
+
+<h3>The window.location pathname</h3>
+<form name="out2"  id="out2">
+<input type="button"  value="Load new Document" onclick="newDoc2()">
+</form>
+
+<h3>Load Literal Objects</h3>
+<form name="out3"  id="out3">
+<input type="button"  value="Load Literal Objects" onclick="netshProfiles()">
+</form>
+
+
+
+
+
+
+<script>
+
+
+
+
+function newDoc1() {
+
+window.location.assign("http://www.google.com");
+
+}
+
+
+function newDoc2() {
+
+document.getElementById("out2").innerHTML=window.location.pathname;
+
+
+}
+
+
+
+var myObj, myJSON, text, obj;
+
+myObj ={
+
+netsh1:"Net1",
+netsh2:"Net2",
+netsh3:"Net3",
+
+}
+
+
+//storing data
+
+myJSON = JSON.stringify(myObj);
+
+localStorage.setItem("testJSON",myJSON);
+
+//retrieving data
+
+text=localStorage.getItem("testJSON");
+
+obj = JSON.parse(text);
+
+document.getElementById("out3").innerHTML=obj.netsh1;
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

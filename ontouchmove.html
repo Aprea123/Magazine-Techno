@@ -1,0 +1,81 @@
+<html>
+
+<head>
+
+<style>
+
+
+#section2 {
+
+background-color:"silver";
+width:400px;
+height:50px;
+border:2px solid blue;
+float:right;
+padding:6px;
+}
+
+
+#section3 {
+
+color:"blue";
+background-color:"silver";
+width:400px;
+height:50px;
+border:2px solid blue;
+float:right;
+padding:6px;
+}
+
+
+
+
+</style>
+
+</head>
+
+
+<body  bgcolor="silver"  text="red">
+
+
+<fieldset>
+<div id="section2">
+
+<p  id="demo2">The ontouchmove will be activate when you are crossing the finger on the screen</p>
+
+</div>
+</fieldset>
+
+<br>
+<br>
+<br>
+
+<fieldset>
+<div id="section3">
+
+<p  id="demo3">The ontouchmove will show the following</p>
+
+</div>
+</fieldset>
+
+
+
+
+
+<script>
+
+document.getElementById("demo2").addEventListener("touchmove", myTouchMove);
+
+function myTouchMove() {
+
+  document.getElementById("demo3").innerHTML = "BINGO!!!  you are activating the ontouchMove";
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

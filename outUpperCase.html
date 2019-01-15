@@ -1,0 +1,74 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<p id="out"></p>
+
+<script>
+
+var text='{
+
+"netsh":"Wifi network",
+"profile":"networks",
+"net":"telekom",
+}';
+
+
+var obj=JSON.parse(text,function(k,v){
+
+if(k=="networks")  {
+
+return v.toUpperCase();
+
+} else {
+
+return value;
+
+}});
+
+
+document.getElementById("out").innerHTML=obj.netsh+"||"+obj.profile;
+
+
+
+var items ='{
+
+"wifi":"netsh-pro1",
+"set":"netsh-pro1",
+"net":"netsh-pro1",
+}';
+
+
+
+var setNetwork=JSON.parse("items",function(key,value) {
+
+
+if(key=="netsh-pro")  {
+
+
+return value.toUpperCase();
+
+}
+
+else {
+
+return value;
+
+
+}});
+  
+
+
+document.getElementById("items").innerHTML=setNetwork.wifi+"-|-"+setNetwork.set;
+
+</script>
+
+
+</body>
+
+
+</html>

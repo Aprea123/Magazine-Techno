@@ -1,0 +1,92 @@
+<html>
+
+<body>
+
+<p>Click the button to check if every element in the array has a value of 18 or more.</p>
+
+
+
+<fieldset>
+<button onclick="myFunction1()">try it</button>
+<button onclick="myFunction2()">try it</button>
+<button onclick="concat1()">try it</button>
+<button onclick="concat2()">try it</button>
+</fieldset>
+
+
+
+
+<p id="demo1"></p>
+<p>---------------------------------------</p>
+<p id="demo2"></p>
+<p>---------------------------------------</p>
+<p id="outNet1"></p>
+<p>---------------------------------------</p>
+<p id="outNet2"></p>
+<p>---------------------------------------</p>
+<script>
+
+var ages=[32,33,16,40];
+
+
+function checkAdult(age)  {
+
+return age >= 18;
+
+}
+
+
+function myFunction1() {
+
+document.getElementById("demo1").innerHTML=ages.every(checkAdult);
+
+}
+
+
+
+var ipPro=[90,55,91,66];
+
+function checkIp(intpro)  {
+
+return intpro >=90;
+
+}
+
+
+function myFunction2() {
+
+document.getElementById("demo2").innerHTML=ipPro.every(checkIp);
+
+}
+
+
+
+function concat1() {
+
+
+	var net1=["wif1-1","wifi-2","wifi-3"];
+	net2=["pro-1","pro-2","pro-3"];
+network=net1.concat(net2);
+
+document.getElementById("outNet1").innerHTML=network;	
+
+}
+
+
+
+function concat2() {
+
+	var ip1=["net-90","net-91","net-92"];
+	ip2=["net-ip1","net-ip2","net-ip3"];
+	outIp=ip1.concat(ip2);
+
+document.getElementById("outNet2").innerHTML=outIp;
+
+}
+
+
+</script>
+
+</body>
+
+</html>

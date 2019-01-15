@@ -1,0 +1,45 @@
+<html>
+
+
+<body>
+
+<hr>
+<p id="out"></p>
+<hr>
+
+
+<script>
+
+var myObj , i , x ="";
+
+
+myObj={
+
+"netsh1":"|Pro-1|-|Pro-2|",
+"netsh2":"|Net-1|-|Net-2|",
+"netsh3":["|net-1|","|net-2|","|net-3|"],
+
+};
+
+
+for(i in myObj.netsh3)  {
+
+
+x+=myObj.netsh3[i]+"|-|"+i;
+
+}
+
+
+
+document.getElementById("out").innerHTML=x;
+
+
+
+
+
+</script>
+
+</body>
+
+
+</html>

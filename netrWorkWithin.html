@@ -1,0 +1,126 @@
+<html>
+
+<head>
+
+<style>
+
+#outLeft1 {
+margin:10px 10px 10px 10px;
+float:right;
+background-color:#58D68D;
+
+}
+
+#outLeft2 {
+margin:10px 10px 10px 10px;
+float:right;
+background-color:#58D68D;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="outLeft1">
+<div id="body">
+<fieldset>
+<input type="button"  value="copyWithin"  onclick="myNetwork1()">
+</fieldset>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="outLeft2">
+<div id="body">
+<fieldset>
+<input type="button"  value="copyWithin"  onclick="myNetwork2()">
+</fieldset>
+</div>
+</div>
+
+
+<br>
+<br>
+
+<div id="outNet1"></div>
+<br>
+<p>----------------------------------------------------</p>
+<br>
+
+<div id="outNet2"></div>
+<br>
+<p>----------------------------------------------------</p>
+<br>
+
+<div id="outNet3"></div>
+<br>
+<p>----------------------------------------------------</p>
+<br>
+
+<div id="outNet4"></div>
+<br>
+<p>----------------------------------------------------</p>
+
+<br>
+
+<div id="outNet5"></div>
+<br>
+<p>----------------------------------------------------</p>
+<br>
+
+<div id="outNet6"></div>
+<br>
+<p>----------------------------------------------------</p>
+
+
+<script>
+
+var netWork=["Net-1","Net-2","Net-3","Net-4","Net-5","Net-6"];
+
+
+	document.getElementById("outNet1").innerHTML=netWork;
+	document.getElementById("outNet2").innerHTML=netWork;
+
+
+
+function myNetwork1() {
+
+	document.getElementById("outNet3").innerHTML=netWork.copyWithin(3,0);
+	document.getElementById("outNet4").innerHTML=netWork.copyWithin(3,0,3);
+
+
+	}
+
+
+function myNetwork2() {
+
+
+var x=document.getElementById("outNet5").innerHTML=netWork.entries();
+
+
+document.getElementById("outNet6").innerHTML=x.next().value;
+
+
+	}
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
